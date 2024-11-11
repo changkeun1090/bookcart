@@ -25,6 +25,10 @@
 		BDF07D2E2CE17DF400F75D7A /* BCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF07D2D2CE17DF400F75D7A /* BCError.swift */; };
 		BDF07D302CE1852900F75D7A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BDF07D2F2CE1852900F75D7A /* .gitignore */; };
 		BDF07D342CE1863B00F75D7A /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDF07D332CE1863B00F75D7A /* Secrets.plist */; };
+		BDF07D372CE19ABC00F75D7A /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF07D362CE19ABC00F75D7A /* SearchCell.swift */; };
+		BDF07D3A2CE1C66E00F75D7A /* BCBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF07D392CE1C66E00F75D7A /* BCBodyLabel.swift */; };
+		BDF07D402CE1CB7600F75D7A /* BCBookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF07D3F2CE1CB7600F75D7A /* BCBookImageView.swift */; };
+		BDF07D422CE1CC7B00F75D7A /* BCTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF07D412CE1CC7B00F75D7A /* BCTitleLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		BDF07D2D2CE17DF400F75D7A /* BCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCError.swift; sourceTree = "<group>"; };
 		BDF07D2F2CE1852900F75D7A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		BDF07D332CE1863B00F75D7A /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		BDF07D362CE19ABC00F75D7A /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		BDF07D392CE1C66E00F75D7A /* BCBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCBodyLabel.swift; sourceTree = "<group>"; };
+		BDF07D3F2CE1CB7600F75D7A /* BCBookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCBookImageView.swift; sourceTree = "<group>"; };
+		BDF07D412CE1CC7B00F75D7A /* BCTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCTitleLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,9 @@
 		BD4CDEE42CD9606200A42007 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDF07D3E2CE1CB6600F75D7A /* ImageView */,
+				BDF07D382CE1C64200F75D7A /* Label */,
+				BDF07D352CE19A9C00F75D7A /* Cell */,
 				BDD0E8942CDAE72700712652 /* TextField */,
 				BD4CDEE92CD960E400A42007 /* BCTabBarController */,
 			);
@@ -173,6 +184,31 @@
 				BDD0E8952CDAE74600712652 /* BCTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		BDF07D352CE19A9C00F75D7A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BDF07D362CE19ABC00F75D7A /* SearchCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BDF07D382CE1C64200F75D7A /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				BDF07D392CE1C66E00F75D7A /* BCBodyLabel.swift */,
+				BDF07D412CE1CC7B00F75D7A /* BCTitleLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		BDF07D3E2CE1CB6600F75D7A /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				BDF07D3F2CE1CB7600F75D7A /* BCBookImageView.swift */,
+			);
+			path = ImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD0E89A2CDAEE9200712652 /* NetworkManager.swift in Sources */,
+				BDF07D372CE19ABC00F75D7A /* SearchCell.swift in Sources */,
+				BDF07D422CE1CC7B00F75D7A /* BCTitleLabel.swift in Sources */,
+				BDF07D402CE1CB7600F75D7A /* BCBookImageView.swift in Sources */,
 				BD4CDEED2CD961E600A42007 /* BCTabBarController.swift in Sources */,
 				BD4CDEEF2CD9635100A42007 /* BookVC.swift in Sources */,
 				BD4CDEF72CD96BF200A42007 /* Constant.swift in Sources */,
@@ -261,6 +300,7 @@
 				BD4CDECE2CD95C8100A42007 /* SceneDelegate.swift in Sources */,
 				BD4CDEF12CD9636400A42007 /* TagVC.swift in Sources */,
 				BD4CDEF32CD9637300A42007 /* SearchVC.swift in Sources */,
+				BDF07D3A2CE1C66E00F75D7A /* BCBodyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
