@@ -14,12 +14,11 @@ class SearchCell: UITableViewCell {
     private var bookImage = BCBookImageView(frame: .zero)
     private var titleLabel = BCTitleLabel(frame: .zero)
     private var authorLabel = BCBodyLabel(frame: .zero)
-    private var publisherLabel = BCBodyLabel(frame: .zero)
     
     private let infoStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 4
+        stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -40,39 +39,23 @@ class SearchCell: UITableViewCell {
         configureStackView()
         
         NSLayoutConstraint.activate([
-            bookImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            bookImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            bookImage.widthAnchor.constraint(equalToConstant: 40),
-            bookImage.heightAnchor.constraint(equalToConstant: 40),
+            bookImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            bookImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            bookImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             
-            infoStackView.leadingAnchor.constraint(equalTo: bookImage.trailingAnchor, constant: 10),
-            infoStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-            infoStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            infoStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+            bookImage.widthAnchor.constraint(equalToConstant: 50),
+            bookImage.heightAnchor.constraint(equalToConstant: 70),
+            
+            infoStackView.leadingAnchor.constraint(equalTo: bookImage.trailingAnchor, constant: 30),
+            infoStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            infoStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            infoStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15)
         ])
     }
     
     private func configureStackView() {
-        infoStackView.addSubview(titleLabel)
-        infoStackView.addSubview(authorLabel)
-        infoStackView.addSubview(publisherLabel)
-        
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: infoStackView.topAnchor, constant: 0),
-            titleLabel.leadingAnchor.constraint(equalTo: infoStackView.leadingAnchor, constant: 0),
-            titleLabel.trailingAnchor.constraint(equalTo: infoStackView.trailingAnchor, constant: 0),
-            titleLabel.heightAnchor.constraint(equalToConstant: 20),
-            
-            authorLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-            authorLabel.leadingAnchor.constraint(equalTo: infoStackView.leadingAnchor, constant: 0),
-            authorLabel.trailingAnchor.constraint(equalTo: infoStackView.trailingAnchor, constant: 0),
-            authorLabel.heightAnchor.constraint(equalToConstant: 20),
-            
-            publisherLabel.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 10),
-            publisherLabel.leadingAnchor.constraint(equalTo: infoStackView.leadingAnchor, constant: 0),
-            publisherLabel.trailingAnchor.constraint(equalTo: infoStackView.trailingAnchor, constant: 0),
-            publisherLabel.heightAnchor.constraint(equalToConstant: 20),
-        ])
+        infoStackView.addArrangedSubview(titleLabel)
+        infoStackView.addArrangedSubview(authorLabel)
     }
     
     func set(book: Book) {
@@ -80,7 +63,7 @@ class SearchCell: UITableViewCell {
         titleLabel.text = book.title
         
         if book.authors.isEmpty {
-            authorLabel.text = ""
+            authorLabel.text = "작자 미상"
         } else {
             authorLabel.text = book.authors[0]
         }

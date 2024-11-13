@@ -24,15 +24,13 @@ class BCTitleLabel: UILabel {
     }
 
     private func configure() {
-        textColor = .secondaryLabel
+        translatesAutoresizingMaskIntoConstraints = false
+        textColor = .label
         
-        font = UIFont.preferredFont(forTextStyle: .body)
+        font = UIFont.preferredFont(forTextStyle: .title3)
         adjustsFontForContentSizeCategory = true // system 설정에 따라 Font size 변화
         
-        adjustsFontSizeToFitWidth = true // text길어지면 size 줄어든다.
-        minimumScaleFactor = 0.75 // 최대로 줄어들 수 있는 크기 설정
-        
-        lineBreakMode = .byWordWrapping
-        translatesAutoresizingMaskIntoConstraints = false
+        lineBreakMode = .byTruncatingTail
+        self.numberOfLines = 1
     }
 }

@@ -26,14 +26,17 @@ class BCBookImageView: UIImageView {
     
     private func configure() {
         self.translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 10
+        layer.cornerRadius = 5
         clipsToBounds = true
         
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.quaternaryLabel.cgColor
+        
         guard let imageUrl = thumnail else {
-            self.image = UIImage(systemName: "photo")
+            self.image = UIImage(systemName: "book")
             return
         }
-        print(imageUrl)
+        
         guard let url = URL(string: imageUrl) else {return}
         
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
@@ -51,18 +54,6 @@ class BCBookImageView: UIImageView {
         }
         
         task.resume()
-        
-        /*
-        DispatchQueue.global().async {
-            if let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.image = image
-                }
-            } else {
-                print("Failed to load image data from URL: \(imageUrl)")
-            }
-        }
-         */
     }
     
 }
