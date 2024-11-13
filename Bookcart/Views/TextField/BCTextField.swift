@@ -48,7 +48,7 @@ class BCTextField: UITextField {
     private func setLeftView() {
         // Create an image view with the search icon
         let iconImageView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
-        iconImageView.tintColor = .gray
+        iconImageView.tintColor = .systemGray
         
         // Wrap the icon in a UIView with padding
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))

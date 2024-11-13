@@ -65,7 +65,7 @@ class BookSearchService {
         var urlComponents = URLComponents(string: baseUrl)
         urlComponents?.queryItems = [
             URLQueryItem(name: "query", value: query),
-            URLQueryItem(name: "size", value:"50")
+            URLQueryItem(name: "size", value:"50"),
         ]
         return urlComponents?.url
     }

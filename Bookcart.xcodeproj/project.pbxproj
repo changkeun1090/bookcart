@@ -19,6 +19,7 @@
 		BD4CDEF32CD9637300A42007 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4CDEF22CD9637300A42007 /* SearchVC.swift */; };
 		BD4CDEF52CD9638500A42007 /* OptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4CDEF42CD9638500A42007 /* OptionVC.swift */; };
 		BD4CDEF72CD96BF200A42007 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4CDEF62CD96BF200A42007 /* Constant.swift */; };
+		BD88DBF02CE4670000C83B43 /* BookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88DBEF2CE4670000C83B43 /* BookDetailVC.swift */; };
 		BDD0E8962CDAE74600712652 /* BCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0E8952CDAE74600712652 /* BCTextField.swift */; };
 		BDD0E8982CDAEE1C00712652 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0E8972CDAEE1C00712652 /* SearchResult.swift */; };
 		BDD0E89A2CDAEE9200712652 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0E8992CDAEE9200712652 /* NetworkManager.swift */; };
@@ -46,6 +47,7 @@
 		BD4CDEF22CD9637300A42007 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		BD4CDEF42CD9638500A42007 /* OptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionVC.swift; sourceTree = "<group>"; };
 		BD4CDEF62CD96BF200A42007 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		BD88DBEF2CE4670000C83B43 /* BookDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailVC.swift; sourceTree = "<group>"; };
 		BDD0E8952CDAE74600712652 /* BCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCTextField.swift; sourceTree = "<group>"; };
 		BDD0E8972CDAEE1C00712652 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		BDD0E8992CDAEE9200712652 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD327A1A2CE4615800C9D636 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD88DBEF2CE4670000C83B43 /* BookDetailVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		BD4CDEBF2CD95C8100A42007 = {
 			isa = PBXGroup;
 			children = (
@@ -127,11 +137,12 @@
 		BD4CDEE42CD9606200A42007 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD327A1A2CE4615800C9D636 /* ViewController */,
 				BDF07D3E2CE1CB6600F75D7A /* ImageView */,
 				BDF07D382CE1C64200F75D7A /* Label */,
 				BDF07D352CE19A9C00F75D7A /* Cell */,
 				BDD0E8942CDAE72700712652 /* TextField */,
-				BD4CDEE92CD960E400A42007 /* BCTabBarController */,
+				BD4CDEE92CD960E400A42007 /* TabBarController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,12 +181,12 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		BD4CDEE92CD960E400A42007 /* BCTabBarController */ = {
+		BD4CDEE92CD960E400A42007 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
 				BD4CDEEC2CD961E600A42007 /* BCTabBarController.swift */,
 			);
-			path = BCTabBarController;
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 		BDD0E8942CDAE72700712652 /* TextField */ = {
@@ -299,6 +310,7 @@
 				BD1E93DA2CDC3C8400CDCECE /* Secrets.swift in Sources */,
 				BD4CDECE2CD95C8100A42007 /* SceneDelegate.swift in Sources */,
 				BD4CDEF12CD9636400A42007 /* TagVC.swift in Sources */,
+				BD88DBF02CE4670000C83B43 /* BookDetailVC.swift in Sources */,
 				BD4CDEF32CD9637300A42007 /* SearchVC.swift in Sources */,
 				BDF07D3A2CE1C66E00F75D7A /* BCBodyLabel.swift in Sources */,
 			);

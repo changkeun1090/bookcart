@@ -16,6 +16,7 @@ class SearchVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .systemBackground
         configureTextField()
         configureTableView()
@@ -25,8 +26,10 @@ class SearchVC: UIViewController {
                 return traitCollection.userInterfaceStyle == .dark ? UIColor.white.withAlphaComponent(0.7) : UIColor.black.withAlphaComponent(0.2)
             }
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,7 +74,7 @@ class SearchVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+    
         tableView.register(SearchCell.self, forCellReuseIdentifier: SearchCell.reuseId)
         tableView.rowHeight = 90
         
@@ -120,6 +123,7 @@ class SearchVC: UIViewController {
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         getBooks()
+        textField.resignFirstResponder()
         return true
     }
     
@@ -158,5 +162,18 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         cell.set(book: book)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.view.endEditing(true)
+        print("didSelectRowAt triggered")
+        let selectedBook = books[indexPath.row]
+        print("Selected book: \(selectedBook)")
+        
+        let detailVC = BookDetailVC()
+        detailVC.book = selectedBook
+        
+        print("Attempting navigation push")
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
-
