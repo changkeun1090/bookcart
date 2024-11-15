@@ -13,7 +13,7 @@ class SearchVC: UIViewController {
     let tableView = UITableView()
     var books: [Book] = []
     let bottomBorderView = UIView() // Added bottom border view
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +21,8 @@ class SearchVC: UIViewController {
         configureTextField()
         configureTableView()
         configureBottomBorder()
-        
+             
+        /// - NOTE:  다크모드에서 Cell의 Seperator가 너무 흐릿하게 보여 색을 따로 설정
         tableView.separatorColor = UIColor { traitCollection in
                 return traitCollection.userInterfaceStyle == .dark ? UIColor.white.withAlphaComponent(0.7) : UIColor.black.withAlphaComponent(0.2)
             }
@@ -63,7 +64,7 @@ class SearchVC: UIViewController {
             bottomBorderView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
             bottomBorderView.heightAnchor.constraint(equalToConstant: 1)
         ])
-        
+    
         bottomBorderView.isHidden = true
     }
     
@@ -164,16 +165,18 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.view.endEditing(true)
-        print("didSelectRowAt triggered")
+//        self.view.endEditing(true)
         let selectedBook = books[indexPath.row]
-        print("Selected book: \(selectedBook)")
-        
         let detailVC = BookDetailVC()
         detailVC.book = selectedBook
-        
-        print("Attempting navigation push")
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }
+
+/*
+ 📌 문제: Cell을 클릭해도 클릭이 되지 않는 현상 발생
+ 
+ 테이블 Cell을 눌러도 Cell이 Selectable 상태가 아니어서 클릭이 되지 않는 현상이 발생했다.
+ 원인은 키보드 dissmiss를 위해서 추가한 tabGesture가 문제였으며
+ 'tap.cancelsTouchesInView = false' 코드를 추가하여 해결하였다.
+ */

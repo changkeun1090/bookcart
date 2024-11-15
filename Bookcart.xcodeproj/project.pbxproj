@@ -19,6 +19,8 @@
 		BD4CDEF32CD9637300A42007 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4CDEF22CD9637300A42007 /* SearchVC.swift */; };
 		BD4CDEF52CD9638500A42007 /* OptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4CDEF42CD9638500A42007 /* OptionVC.swift */; };
 		BD4CDEF72CD96BF200A42007 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4CDEF62CD96BF200A42007 /* Constant.swift */; };
+		BD6766952CE70F3E00820FDF /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6766942CE70F3E00820FDF /* String+Ext.swift */; };
+		BD6766972CE70F4800820FDF /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6766962CE70F4800820FDF /* Date+Ext.swift */; };
 		BD88DBF02CE4670000C83B43 /* BookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88DBEF2CE4670000C83B43 /* BookDetailVC.swift */; };
 		BDD0E8962CDAE74600712652 /* BCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0E8952CDAE74600712652 /* BCTextField.swift */; };
 		BDD0E8982CDAEE1C00712652 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD0E8972CDAEE1C00712652 /* SearchResult.swift */; };
@@ -47,6 +49,8 @@
 		BD4CDEF22CD9637300A42007 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		BD4CDEF42CD9638500A42007 /* OptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionVC.swift; sourceTree = "<group>"; };
 		BD4CDEF62CD96BF200A42007 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		BD6766942CE70F3E00820FDF /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		BD6766962CE70F4800820FDF /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		BD88DBEF2CE4670000C83B43 /* BookDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailVC.swift; sourceTree = "<group>"; };
 		BDD0E8952CDAE74600712652 /* BCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCTextField.swift; sourceTree = "<group>"; };
 		BDD0E8972CDAEE1C00712652 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 		BD4CDEE62CD9607300A42007 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BD6766942CE70F3E00820FDF /* String+Ext.swift */,
+				BD6766962CE70F4800820FDF /* Date+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -306,12 +312,14 @@
 				BD4CDEF52CD9638500A42007 /* OptionVC.swift in Sources */,
 				BDF07D2E2CE17DF400F75D7A /* BCError.swift in Sources */,
 				BD4CDED62CD95C8100A42007 /* Bookcart.xcdatamodeld in Sources */,
+				BD6766972CE70F4800820FDF /* Date+Ext.swift in Sources */,
 				BDD0E8962CDAE74600712652 /* BCTextField.swift in Sources */,
 				BD1E93DA2CDC3C8400CDCECE /* Secrets.swift in Sources */,
 				BD4CDECE2CD95C8100A42007 /* SceneDelegate.swift in Sources */,
 				BD4CDEF12CD9636400A42007 /* TagVC.swift in Sources */,
 				BD88DBF02CE4670000C83B43 /* BookDetailVC.swift in Sources */,
 				BD4CDEF32CD9637300A42007 /* SearchVC.swift in Sources */,
+				BD6766952CE70F3E00820FDF /* String+Ext.swift in Sources */,
 				BDF07D3A2CE1C66E00F75D7A /* BCBodyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +464,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9JY2D829G5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bookcart/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
@@ -488,6 +497,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9JY2D829G5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bookcart/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";

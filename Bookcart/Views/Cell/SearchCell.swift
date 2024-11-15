@@ -12,8 +12,8 @@ class SearchCell: UITableViewCell {
     static let reuseId = "SearchCell"
     
     private var bookImage = BCBookImageView(frame: .zero)
-    private var titleLabel = BCTitleLabel(frame: .zero)
-    private var authorLabel = BCBodyLabel(frame: .zero)
+    private var titleLabel = BCTitleLabel(fontSize: .title3)
+    private var authorLabel = BCBodyLabel(color: .secondaryLabel)
     
     private let infoStackView: UIStackView = {
         let stackView = UIStackView()
@@ -67,6 +67,5 @@ class SearchCell: UITableViewCell {
         } else {
             authorLabel.text = book.authors[0]
         }
-        
     }
 }

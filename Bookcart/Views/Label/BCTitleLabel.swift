@@ -18,9 +18,10 @@ class BCTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(textAlignment: NSTextAlignment) {
+    convenience init(textAlignment: NSTextAlignment = .natural, fontSize: UIFont.TextStyle ) {
         self.init(frame: .zero)
         self.textAlignment = textAlignment
+        self.font = UIFont.preferredFont(forTextStyle: fontSize)
     }
 
     private func configure() {
