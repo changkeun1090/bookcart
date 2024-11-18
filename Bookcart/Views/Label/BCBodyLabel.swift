@@ -35,13 +35,14 @@ class BCBodyLabel: UILabel {
         font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontForContentSizeCategory = true // system 설정에 따라 Font size 변화
         
-        adjustsFontSizeToFitWidth = true // text길어지면 size 줄어든다.
-        minimumScaleFactor = 0.75 // 최대로 줄어들 수 있는 크기 설정
-        
         lineBreakMode = .byTruncatingTail
         self.numberOfLines = 1
         
-//        lineBreakMode = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
+
+/*
+adjustsFontSizeToFitWidth = true // text길어지면 size 줄어든다.
+minimumScaleFactor = 0.75 // 최대로 줄어들 수 있는 크기 설정
+ */
