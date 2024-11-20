@@ -27,7 +27,7 @@ class BCTextField: UITextField {
         
         textColor = .label
         tintColor = .label
-        textAlignment = .center
+//        textAlignment = .center
         font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontSizeToFitWidth = true
         // text길어지면 font-size가 작아지도록 한다.
@@ -51,7 +51,7 @@ class BCTextField: UITextField {
         iconImageView.tintColor = .systemGray
         
         // Wrap the icon in a UIView with padding
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 20))
         iconImageView.frame = CGRect(x: 8, y: 0, width: 20, height: 20)
         paddingView.addSubview(iconImageView)
         

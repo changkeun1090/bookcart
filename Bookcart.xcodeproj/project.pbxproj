@@ -32,6 +32,7 @@
 		BDF07D3A2CE1C66E00F75D7A /* BCBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF07D392CE1C66E00F75D7A /* BCBodyLabel.swift */; };
 		BDF07D402CE1CB7600F75D7A /* BCBookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF07D3F2CE1CB7600F75D7A /* BCBookImageView.swift */; };
 		BDF07D422CE1CC7B00F75D7A /* BCTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF07D412CE1CC7B00F75D7A /* BCTitleLabel.swift */; };
+		BDFF359D2CEAEF0C00F09F97 /* BCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF359C2CEAEF0C00F09F97 /* BCButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		BDF07D392CE1C66E00F75D7A /* BCBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCBodyLabel.swift; sourceTree = "<group>"; };
 		BDF07D3F2CE1CB7600F75D7A /* BCBookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCBookImageView.swift; sourceTree = "<group>"; };
 		BDF07D412CE1CC7B00F75D7A /* BCTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCTitleLabel.swift; sourceTree = "<group>"; };
+		BDFF359C2CEAEF0C00F09F97 /* BCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		BD4CDEE42CD9606200A42007 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDFF359B2CEAEEF500F09F97 /* Button */,
 				BD327A1A2CE4615800C9D636 /* ViewController */,
 				BDF07D3E2CE1CB6600F75D7A /* ImageView */,
 				BDF07D382CE1C64200F75D7A /* Label */,
@@ -228,6 +231,14 @@
 			path = ImageView;
 			sourceTree = "<group>";
 		};
+		BDFF359B2CEAEEF500F09F97 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF359C2CEAEF0C00F09F97 /* BCButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -308,6 +319,7 @@
 				BD4CDEEF2CD9635100A42007 /* BookVC.swift in Sources */,
 				BD4CDEF72CD96BF200A42007 /* Constant.swift in Sources */,
 				BDD0E8982CDAEE1C00712652 /* SearchResult.swift in Sources */,
+				BDFF359D2CEAEF0C00F09F97 /* BCButton.swift in Sources */,
 				BD4CDECC2CD95C8100A42007 /* AppDelegate.swift in Sources */,
 				BD4CDEF52CD9638500A42007 /* OptionVC.swift in Sources */,
 				BDF07D2E2CE17DF400F75D7A /* BCError.swift in Sources */,
